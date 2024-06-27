@@ -1,0 +1,333 @@
+@font-face {
+    font-family: font1;
+    src: url(plain-light-webfont.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family: font3;
+    src: url(silkserif-lightitalic-webfont.ttf);
+}
+@font-face {
+    font-family: font4;
+    src: url(silkserif-regularitalic-webfont.ttf);
+}
+@font-face {
+    font-family: font5;
+    src: url(Blackpast.ttf);
+}
+@font-face {
+    font-family: font6;
+    src: url(Gilroy-Light.ttf);
+}
+@font-face {
+    font-family: font7;
+    src: url(Gilroy-Regular.ttf);
+}
+@font-face {
+    font-family: font8;
+    src: url(SpaceMono-Regular\ copy.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: font1;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.mouseFollower{
+    border: 3px solid #fff;
+    scale: 1;
+    mix-blend-mode: difference;
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #000000;
+    padding: 17vh 7vw;
+    /* display: none; */
+}
+.line{
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3vw;
+}
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4vw;
+}
+#line1-part1 h5,#line1-part1 h6{
+    font-size: 2.8vw;
+    font-family: font4;
+    font-weight: 100;
+}
+#line1-part1 h5{
+    width: 4vw;
+    text-align: right;
+}
+.line h1{
+    font-size: 6.6vw;
+    font-weight: 600;
+    line-height: 8vw;
+    font-family: font7;
+}
+#main{
+    position: relative;
+    background-color: #111111;
+}
+.line h2{
+    font-size: 5vw;
+    font-weight: 400;
+    opacity: 1;
+    
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #111111;
+    overflow: visible;
+}
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vw;
+    padding: 3.3vw 8.5vw;
+}
+#nav img{
+    mix-blend-mode: difference;
+}
+#page1 #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4vw;
+    margin-right: -3.7vw;
+}
+#nav-part2 h4{
+    font-size: 1.1vw;
+    font-weight: 200;
+    font-family: font2;
+}
+.hero{
+    /* background-color: aqua; */
+    width: 72%;
+    margin-left: 28%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 99999;
+}
+
+.hero:nth-child(2){
+    margin-top: 7.8vw;
+}
+.hero h2{
+    border-bottom: 0.5vw solid white;
+    /* transition: all ease 0.3s; */
+}
+.hero h3{
+    margin-left: 1.4vw;
+}
+.hero h1,.hero h2,.hero h3{
+    font-size: 7vw;
+    font-weight: 600;
+    letter-spacing: 0.3vw;
+    line-height: 7.2vw;
+}
+#page2{
+    height: 100%;
+    width: 100%;
+}
+.videocontainer video{
+    width: 100%;
+    position: relative;
+    height: 46vw;
+    background-position: filled;
+    /* padding: 2vw; */
+}
+#overlay{
+    
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* background-color: rgb(218, 205, 26); */
+    padding: 0vw 10vw;
+    color: #eee7e7;
+    /* backdrop-filter: blur(2px); */
+}
+#over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+    mix-blend-mode: difference;
+}
+#over1 h1{
+    font-size: 4vw;
+    line-height: 5vw;
+    font-family: font5;
+}
+
+#over2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid white;
+}
+#over2 h4{
+    padding-top: 1vw;
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: beige;
+    margin-top: 13vh;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+#right{
+    width: 50%;
+    height: 100%;
+}
+#left{
+    width: 50%;
+    height: 100%;
+}
+#left h1{
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 60px;
+    color: gray;
+    cursor: pointer;
+}
+#left h1:hover{
+    transform: translateX(4vw);
+}
+#left h1 span{
+    transition: transform 0.5s ease-in-out;
+    animation-duration: 2s;
+    font-family: font5;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    background-color: beige;
+}
+#footer{
+    margin-top: -11vh;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+#footer-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.underline3{
+    height: 1px ;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.951);
+    margin:5.8vw 0vw;
+}
+
+#bottom{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 2vw 5vw;
+    color: rgb(209, 203, 203);
+}
+#bottom h1{
+    position: absolute;
+    top:-0.5vw;
+    left: 10%;
+    font-size: 5vw;
+    font-family: font2;
+    letter-spacing: -2px;
+    opacity: 0.3;
+    width: fit-content;
+}
+#bottom h1:hover{
+    cursor: pointer;
+    opacity: 1;
+    color: #aa6ad5;
+}
+#bottom h2{
+    position: absolute;
+    /* top: 32%; */
+    left: 40.9%;
+    font-size: 2vw;
+    font-family: font5;
+    opacity: 1;
+}
+#bottom h1::after{
+    content: "©️";
+    font-family: font1;
+    font-size: 1.5vw;
+    font-weight: 400;
+    position: absolute;
+    bottom: 48%;
+    left: 101%;
+}
+#bottom h2::before{
+    content: "fashion studio";
+    font-family: font6;
+    font-size: 0.9vw;
+    font-weight: 550;
+    position: absolute;
+    bottom: -165%;
+    left: -170%;
+    letter-spacing: 1px;
+}
+#bottom h4{
+    position: absolute;
+    left: 68%;
+    top: 29%;
+    font-family: font6;
+}
+#lobo{
+    position: absolute;
+    left: 41%;
+    top: 90%;
+    /* position: fixed; */
+}
+#lobo i{
+    font-size: 1.8vw;
+    opacity: 0.5;
+    letter-spacing: 1vw;
+}
+#lobo i:hover{
+    color: rgb(36, 226, 226);
+    cursor: pointer;
+    opacity: 3;
+    font-size: 1.8vw;
+    font-weight: bolder;
+}
