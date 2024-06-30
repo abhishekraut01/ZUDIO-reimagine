@@ -77,10 +77,22 @@ function curserAnimation(){
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         duration: 1,
       });
-    Shery.makeMagnet("#lobo i,#bottom h1",{
+    Shery.makeMagnet("#lobo i,#bottom h1 ",{
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         duration: 1,
       });
+    Shery.makeMagnet("#btn-1",{
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+      });
+      Shery.imageMasker(".imgEffect" /* Element to target.*/, {
+        //Parameters are optional.
+        mouseFollower: true,
+        text: "SHOP NOW",
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 2,
+      });
+     
 var videocontainer = document.querySelector("#video-container")
 videocontainer.addEventListener("mouseenter",function(){
     videocontainer.addEventListener("mousemove",function(dets){
@@ -126,6 +138,8 @@ videocontainer.addEventListener("click",function(){
 })
 }
 
+
+
 loadinganimation()
 curserAnimation()
 locomotiveanimation()
@@ -146,3 +160,19 @@ document.querySelector("#hero3 ").addEventListener("mouseleave",function(){
     })
 })
 // ---------------------------------------------------- page 4---------------------------
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const videoPlayer = document.querySelector("#videpPlayer video");
+    const videoLinks = document.querySelectorAll("#right h1 span");
+
+    videoLinks.forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            const newVideoSrc = link.getAttribute("data-video");
+            videoPlayer.src = `./videos/${newVideoSrc}`;
+            videoPlayer.play();
+        });
+    });
+});
+
+
