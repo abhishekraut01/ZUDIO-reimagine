@@ -169,7 +169,7 @@ html,body{
 #page3{
     /* height: 100vh; */
     width: 100%;
-    /* background-color: beige; */
+    background-color: beige;
     margin-top: 13vh;
 }
 #scroll{
@@ -183,7 +183,7 @@ html,body{
 #container{
     height: 100%;
     width: auto;
-    /* background-color: blue; */
+    background-color: blue;
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
@@ -196,7 +196,7 @@ html,body{
 }
 #container img{
     height: 40vw;
-    width: 60vw;
+    width: 30vw;
     border-radius: 0.5vh;
     object-fit: cover;
     margin: 1vh;
@@ -215,38 +215,6 @@ html,body{
     }
 }
 
-#page4{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    overflow-x: hidden;
-}
-#left{
-    width: 50%;
-    height: 100%;
-}
-#right{
-    width: 50%;
-    height: 100%;
-}
-#right h1{
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 60px;
-    cursor: pointer;
-}
-#right h1:hover{
-    transform: translateX(4vw);
-}
-#right h1 span{
-    transition: transform 0.5s ease-in-out;
-    animation-duration: 2s;
-    font-family: font5;
-    color: rgb(201, 199, 199);
-}
-#right h1 span:hover{
-    color: white;
-}
 #page5{
     height: 100vh;
     width: 100%;
@@ -482,4 +450,53 @@ html,body{
     opacity: 3;
     font-size: 1.8vw;
     font-weight: bolder;
+}
+
+/* ---------------------------------------- Page 4 -------------------------------------------- */
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    background-color: salmon;
+}
+#left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aa6ad5;
+}
+#right {
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+}
+#right h1 {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Add this line for smooth transition */
+}
+#right h1:hover {
+    transform: translateX(4vw);
+}
+#right h1 span {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
+    animation-duration: 2s;
+    font-family: font5;
+    color: #abb8c3;
+}
+#right h1 span:hover {
+    color: white;
+}
+
+video {
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    
 }

@@ -17,7 +17,6 @@ ScrollTrigger.scrollerProxy("#main", {
 });
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
-
 }
 function loadinganimation(){
     var tl = gsap.timeline()
@@ -146,3 +145,4 @@ document.querySelector("#hero3 ").addEventListener("mouseleave",function(){
         opacity:0
     })
 })
+// ---------------------------------------------------- page 4---------------------------
