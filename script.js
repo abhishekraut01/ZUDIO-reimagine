@@ -18,6 +18,8 @@ ScrollTrigger.scrollerProxy("#main", {
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 }
+
+
 function loadinganimation(){
     var tl = gsap.timeline()
 tl.from(".line h1 ,#line1-part1 h5,#line1-part1 h6",{
@@ -69,6 +71,41 @@ tl.from("#nav",{
 tl.from(".hero ,#page2",{
     opacity:0
 },"-=3")
+
+
+    const h1Elements = document.querySelectorAll('#page4_right h1');
+    const imgElements = document.querySelectorAll('#page4_left img');
+    
+    h1Elements.forEach(function(h1, index) {
+    
+    const img = imgElements[index];
+    
+    
+    const tl = gsap.timeline({ paused: true });
+    
+    tl.to(img, { opacity: 1, duration: 0.3, scale: 1 });
+    
+    
+        h1.addEventListener('mouseover', function() {
+            tl.play(); 
+        });
+    
+        h1.addEventListener('mouseout', function() {
+            tl.reverse(); 
+        });
+    
+        img.addEventListener('mouseover', function() {
+            tl.play();
+        });
+    
+        img.addEventListener('mouseout', function() {
+    
+        const isHovering = h1.matches(':hover') || img.matches(':hover');
+            if (!isHovering) {
+                tl.reverse();
+                }
+            });
+        });
 }
 function curserAnimation(){
     var video =document.querySelector("#video-container video")
@@ -85,12 +122,20 @@ function curserAnimation(){
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         duration: 1,
       });
+    Shery.makeMagnet("#circle-btn",{
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+      });
       Shery.imageMasker(".imgEffect" /* Element to target.*/, {
         //Parameters are optional.
         mouseFollower: true,
         text: "SHOP NOW",
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         duration: 2,
+      });
+      Shery.hoverWithMediaCircle(".right-text" /* Element to target.*/, {
+        images: ["image1.jpg", "image2.jpg", "image3.jpg"] /*OR*/,
+        //videos: ["video1.mp4", "video2.mp4"],
       });
      
 var videocontainer = document.querySelector("#video-container")
@@ -161,18 +206,41 @@ document.querySelector("#hero3 ").addEventListener("mouseleave",function(){
 })
 // ---------------------------------------------------- page 4---------------------------
 
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-    const videoPlayer = document.querySelector("#videpPlayer video");
-    const videoLinks = document.querySelectorAll("#right h1 span");
-
-    videoLinks.forEach(link => {
-        link.addEventListener("mouseenter", () => {
-            const newVideoSrc = link.getAttribute("data-video");
-            videoPlayer.src = `./videos/${newVideoSrc}`;
-            videoPlayer.play();
-        });
-    });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     const h1Elements = document.querySelectorAll('#page4_right h1');
+//     const imgElements = document.querySelectorAll('#page4_left img');
+    
+//     h1Elements.forEach(function(h1, index) {
+    
+//     const img = imgElements[index];
+    
+    
+//     const tl = gsap.timeline({ paused: true });
+    
+//     tl.to(img, { opacity: 1, duration: 0.3, scale: 1 });
+    
+    
+//         h1.addEventListener('mouseover', function() {
+//             tl.play(); 
+//         });
+    
+//         h1.addEventListener('mouseout', function() {
+//             tl.reverse(); 
+//         });
+    
+//         img.addEventListener('mouseover', function() {
+//             tl.play();
+//         });
+    
+//         img.addEventListener('mouseout', function() {
+    
+//         const isHovering = h1.matches(':hover') || img.matches(':hover');
+//             if (!isHovering) {
+//                 tl.reverse();
+//                 }
+//             });
+//         });
+//     });
+    
 
 
