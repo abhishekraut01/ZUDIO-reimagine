@@ -86,16 +86,18 @@ html,body{
     line-height: 8vw;
     font-family: font7;
 }
-#main{
-    position: relative;
-    background-color: #000;
-}
 .line h2{
     font-size: 5vw;
     font-weight: 400;
     opacity: 1;
     
 }
+
+#main{
+    position: relative;
+    background-color: #000;
+}
+
 #page1{
     height: 24vh;
     width: 100%;
@@ -128,11 +130,18 @@ html,body{
     height: 100%;
     width: 100%;
 }
-#page2 .videocontainer video{
+#page2 .videocontainer #video1{
     width: 100%;
     position: relative;
     height: 46vw;
     background-position: filled;
+}
+#page2 .videocontainer #video2{
+    width: 100%;
+    position: relative;
+    height: 46vw;
+    background-position: filled;
+    display: none;
 }
 #overlay{ 
     width: 100%;
@@ -165,6 +174,9 @@ html,body{
     padding-top: 1vw;
     font-size: 1.6vw;
     font-weight: 600;
+}
+#nav i{
+    display: none;
 }
 #page3{
     /* height: 100vh; */
@@ -683,9 +695,9 @@ html,body{
     border: none;
 }
 #right-bottom{
-    
     display: flex;
     gap: 15px;
     align-items: center;
     padding-top: 65px;
 }
+
