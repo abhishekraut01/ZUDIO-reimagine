@@ -1,25 +1,3 @@
-function locomotiveanimation(){
-    gsap.registerPlugin(ScrollTrigger);
-
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
-});
-locoScroll.on("scroll", ScrollTrigger.update);
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-});
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-ScrollTrigger.refresh();
-}
-
-
 function loadinganimation(){
     var tl = gsap.timeline()
 tl.from(".line h1 ,#line1-part1 h5,#line1-part1 h6",{
@@ -182,12 +160,14 @@ videocontainer.addEventListener("click",function(){
     }
 })
 }
+loadinganimation();
+// Check if the screen width is greater than 768px (adjust as needed for your mobile breakpoint)
+if (window.innerWidth > 768) {
+    curserAnimation();
+}
 
 
 
-loadinganimation()
-curserAnimation()
-locomotiveanimation()
 document.addEventListener("mousemove",function(dets){
     gsap.to("#flag",{
         x:dets.x,
@@ -204,43 +184,6 @@ document.querySelector("#hero3 ").addEventListener("mouseleave",function(){
         opacity:0
     })
 })
-// ---------------------------------------------------- page 4---------------------------
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const h1Elements = document.querySelectorAll('#page4_right h1');
-//     const imgElements = document.querySelectorAll('#page4_left img');
-    
-//     h1Elements.forEach(function(h1, index) {
-    
-//     const img = imgElements[index];
-    
-    
-//     const tl = gsap.timeline({ paused: true });
-    
-//     tl.to(img, { opacity: 1, duration: 0.3, scale: 1 });
-    
-    
-//         h1.addEventListener('mouseover', function() {
-//             tl.play(); 
-//         });
-    
-//         h1.addEventListener('mouseout', function() {
-//             tl.reverse(); 
-//         });
-    
-//         img.addEventListener('mouseover', function() {
-//             tl.play();
-//         });
-    
-//         img.addEventListener('mouseout', function() {
-    
-//         const isHovering = h1.matches(':hover') || img.matches(':hover');
-//             if (!isHovering) {
-//                 tl.reverse();
-//                 }
-//             });
-//         });
-//     });
-    
 
 
