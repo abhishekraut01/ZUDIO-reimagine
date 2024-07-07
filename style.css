@@ -37,11 +37,39 @@
     box-sizing: border-box;
     color: white;
     font-family: font1;
+    /* overflow-x: hidden; */
 }
 html,body{
     height: 100%;
     width: 100%;
 }
+WebKit browsers (Chrome, Safari)
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 6px;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(43, 43, 43) black;
+}
+
+/* For Edge and IE */
+* {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 .mouseFollower{
     border: 3px solid #fff;
     scale: 1;
